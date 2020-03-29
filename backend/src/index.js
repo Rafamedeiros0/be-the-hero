@@ -4,9 +4,9 @@ const routes = require("./routes")
 
 const app = express();
 
-app.use(Cors()); //se for produção passar uma variavel origin...
-app.use(express.json());
-app.use(routes); //sempre abaixo da linha do express.json
+app.use(cors()); //se for produção passar uma variavel origin...
+app.use(express.json()); //aviso ao express que estou usando JSON nas minhas requisições e ele fará a conversão para JS
+app.use(routes); //sempre abaixo da lin ha do express.json
 
 app.listen(3333);
 
